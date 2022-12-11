@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Montserrat"],
+        body: ["Nunito"],
       },
     },
     screens: {
