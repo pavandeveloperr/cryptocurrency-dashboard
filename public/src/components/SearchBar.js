@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const SearchBar = () => {
+  const [searchText, setSearchText] = useState("");
+  
+  let handleInput = (e) => {
+    e.preventDefault();
+    let query = e.target.value;
+    setSearchText(query);
+  }
+
+
   return (
     <>
       <div className="flex">
@@ -33,8 +42,8 @@ export const SearchBar = () => {
                 name="searchText"
                 id="searchTextDesktop"
                 required
-                // value={searchQueryText}
-                // onChange={(e) => setSearch(e.target.value)}
+                value={searchText}
+                onChange={handleInput}
                 className="flex shadow-lg focus-outlet-none focus:ring-2 invalid:bg-white-200
                      md:text-md sm:text-md w-full pl-14 py-3 pr-2 p border-gray-400 rounded-lg overflow-hidden focus-within:shadow-none outline-none sm:items-center"
                 placeholder="Search by coin"
@@ -42,6 +51,21 @@ export const SearchBar = () => {
             </div>
           </div>
         </form>
+
+        {
+          searchText.length > 0 ?
+
+          <ul className="absolute top-11 right-0 w-full h-96 rounded overflow-x-hidden py-2 bg-gray-200 bg-opacity-60 backdrop-blur-md ">
+            <li>Bitcoin</li>
+            <li>ethereum</li>
+          </ul>
+
+          :
+
+          null
+        }
+
+
       </div>
     </>
   );
