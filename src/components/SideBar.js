@@ -4,7 +4,8 @@ import selectIcon from "../assets/select-icon.svg";
 import Pagination from "./Pagination";
 
 export const SideBar = () => {
-  const { cryptoData, setSortBy, resetFunction } = useContext(CryptoContext);
+  const { cryptoData, setSortBy, resetFunction, currency } = useContext(CryptoContext);
+
 
   return (
     <div className="bg-white rounded-lg shadow-lg">
@@ -99,7 +100,7 @@ export const SideBar = () => {
                         <span>
                           {parseFloat(
                             cryptoData.market_cap_change_percentage_24h
-                          ).toFixed(2)}
+                          ).toFixed(2)} %
                         </span>
                       </div>
                     </div>
@@ -108,8 +109,8 @@ export const SideBar = () => {
                       <span className="text-[11px] -mt-8 ml-5 text-gray-500 font-semibold flex pl-8 mx-4 mb-4 truncate">
                         Mkt.Cap{" "}
                         {new Intl.NumberFormat("en-IN", {
-                          style: "currency",
-                          currency: "usd",
+                          style: "currency" ,
+                          currency: currency,
                         }).format(cryptoData.market_cap)}
                       </span>
                     </div>

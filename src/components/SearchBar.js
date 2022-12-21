@@ -1,11 +1,10 @@
 import debounce from "lodash.debounce";
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { CryptoContext } from "../context/CryptoContext";
 
 const SearchInput = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
-  const { searchData, setCoinSearch, setSearchData } =
-    useContext(CryptoContext);
+  const { searchData, setCoinSearch, setSearchData } = useContext(CryptoContext);
 
   let handleInput = (e) => {
     e.preventDefault();
@@ -20,6 +19,7 @@ const SearchInput = ({ handleSearch }) => {
     setSearchData();
   };
 
+ 
   return (
     <>
       <form className="flex pl-5 w-full font-body">
@@ -56,7 +56,7 @@ const SearchInput = ({ handleSearch }) => {
       {searchText.length > 0 ? (
         <ul
           className="absolute top-14 -right-2 w-full h-96 rounded
-overflow-x-hidden py-2 bg-gray-200 bg-opacity-60 overflow-y-scroll
+overflow-x-hidden py-2 bg-gray-200 bg-opacity-60 overflow-scroll
 backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100
 "
         >
@@ -75,9 +75,9 @@ backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-10
               );
             })
           ) : (
-            <div className="w-full mt-8 flex justify-center items-center">
+            <div className="w-full h-full mt-8 flex justify-center items-center">
               <div
-                className="w-8 h-8 border-4 border-gray-600 rounded-full border-b-gray-200 animate-spin"
+                className="w-8 h-8 flex border-4 border-gray-600 rounded-full border-b-gray-200 animate-spin"
                 role="status"
               />
               <span className="ml-2">Searching...</span>
@@ -90,19 +90,36 @@ backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-10
 };
 
 export const SearchBar = () => {
-  const { getSearchResult } = useContext(CryptoContext);
+  const { getSearchResult, setCurrency, currency } = useContext(CryptoContext);
+  const currencyRef = useRef();
+
+  const handleCurrency = (e) => {
+    e.preventDefault();
+    let val = currencyRef.current.value;
+    setCurrency(val);
+    currencyRef.current.value = "";
+  };
+
 
   const debounceFunc = debounce(function (val) {
     getSearchResult(val);
   }, 2000);
 
+  
+
   return (
     <>
       <div className="flex">
-        <span className="flex shadow-md">
-          <select className="outline-none font-body pl-3 pr-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer">
-            <option value={"USD"}>INR</option>
-            <option value={"INR"}>USD</option>
+        <span className="flex shadow-lg">
+          <select value={currency} onChange={handleCurrency} ref={currencyRef} className="outline-none font-body pl-3 pr-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer">
+            <option value={"usd"}>USD</option>
+            <option value={"inr"}>INR</option>
+            <option value={"eur"}>EUR</option>
+            <option value={"jpy"}>JPY</option>
+            <option value={"aud"}>AUD</option>
+            <option value={"nzd"}>NZD</option>
+            <option value={"cad"}>CAD</option>
+            <option value={"gbp"}>GBP</option>
           </select>
         </span>
 
