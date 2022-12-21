@@ -57,7 +57,7 @@ const SearchInput = ({ handleSearch }) => {
         <ul
           className="absolute top-14 -right-2 w-full h-96 rounded
 overflow-x-hidden py-2 bg-gray-200 bg-opacity-60 overflow-y-scroll
-backdrop-blur-md scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100
+backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100
 "
         >
           {searchData ? (
