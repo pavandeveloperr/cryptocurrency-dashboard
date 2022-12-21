@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCoins } from "../redux/action/action";
 import { CryptoChart } from "./CryptoChart";
@@ -12,41 +12,37 @@ import Lottie from "lottie-react";
 import * as bitcoin from "../79966-bitcoin-cryptocurrency-city.json";
 import * as success from "../1127-success.json";
 
-
 function Dashboard() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.default);
   const [loading, setLoading] = useState(undefined);
   const [completed, setCompleted] = useState(undefined);
 
-
   useEffect(() => {
     setTimeout(() => {
       if (data.coinList.length === 0) {
         dispatch(fetchCoins());
-      
+
         setLoading(true);
-       
-      setTimeout(() => {
-        setCompleted(true);
-      }, 1000); 
+
+        setTimeout(() => {
+          setCompleted(true);
+        }, 1000);
       }
     }, 5000);
   }, [data.coinList.length, dispatch]);
-
-  
 
   return (
     <>
       {!completed ? (
         <>
-        <div className="lg:w-[350px] lg:ml-[450px] lg:mt-[100px] w-[200px] mt-[150px] ml-[100px] sm:mt-[90px] sm:ml-[60px] sm:w-[40px] md:mt-[90px] md:ml-[230px] md:w-[300px]">
-          {!loading ? (
-            <Lottie animationData={bitcoin} />
-          ) : (
-            <Lottie animationData={success} />
-          )}
-        </div>
+          <div className="lg:w-[350px] lg:ml-[450px] lg:mt-[100px] w-[200px] mt-[150px] ml-[100px] sm:mt-[90px] sm:ml-[60px] sm:w-[40px] md:mt-[90px] md:ml-[230px] md:w-[300px]">
+            {!loading ? (
+              <Lottie animationData={bitcoin} />
+            ) : (
+              <Lottie animationData={success} />
+            )}
+          </div>
         </>
       ) : (
         <>
