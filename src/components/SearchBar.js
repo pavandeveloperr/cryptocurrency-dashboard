@@ -107,7 +107,7 @@ export const SearchBar = () => {
   return (
     <>
       <div className="flex">
-        <span className="flex shadow-lg bg-white rounded-lg">
+        <span className="flex shadow-lg bg-white rounded-md">
           <select
             value={currency}
             onChange={handleCurrency}
