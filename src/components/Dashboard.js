@@ -9,7 +9,7 @@ import { SearchBar } from "./SearchBar";
 import { useState } from "react";
 import Lottie from "lottie-react";
 
-import * as bitcoin from "../79966-bitcoin-cryptocurrency-city.json";
+import * as bitcoin from "../92445-crypto-bitcoin.json";
 import * as success from "../1127-success.json";
 
 function Dashboard() {
