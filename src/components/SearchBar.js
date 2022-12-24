@@ -1,6 +1,7 @@
 import debounce from "lodash.debounce";
 import React, { useContext, useRef, useState } from "react";
 import { CryptoContext } from "../context/CryptoContext";
+import selectIcon from "../assets/select-icon.svg";
 
 const SearchInput = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
@@ -22,8 +23,8 @@ const SearchInput = ({ handleSearch }) => {
 
   return (
     <>
-      <form className="flex pl-5 w-full font-body">
-        <div className="flex flex-grow rounded-sm shadow-lg">
+      <form className="flex pl-2 w-full font-body">
+        <div className="flex flex-grow rounded-sm shadow-md">
           <div className="flex flex-grow items-center">
             <span className="absolute text-[13px] lg:text-[13px] sm:text-[12px] md:text-[14px] ml-6 text-gray-400">
               <svg
@@ -57,7 +58,7 @@ const SearchInput = ({ handleSearch }) => {
         <ul
           className="absolute top-14 -right-2 w-full h-96 rounded
 overflow-x-hidden py-2 bg-gray-200 bg-opacity-30 overflow-scroll
-backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 z-0
+backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 z-10
 "
         >
           {searchData ? (
@@ -107,12 +108,12 @@ export const SearchBar = () => {
   return (
     <>
       <div className="flex">
-        <span className="flex shadow-lg  sm:bg-white rounded-md">
+        <span className="flex shadow-lg lg:bg-white md:bg-white sm:bg-white bg-white rounded-lg">
           <select
             value={currency}
             onChange={handleCurrency}
             ref={currencyRef}
-            className="outline-none font-body pl-3 pr-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer"
+            className="outline-none font-body mr-1 pl-6 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer"
           >
             <option value={"usd"}>USD</option>
             <option value={"inr"}>INR</option>
@@ -124,6 +125,11 @@ export const SearchBar = () => {
             <option value={"gbp"}>GBP</option>
           </select>
         </span>
+        <img
+          src={selectIcon}
+          alt="submit"
+          className=" w-[0.7rem] relative h-[0.9rem] top-4 right-[1.2rem]"
+        />
 
         <div className="relative w-full">
           <SearchInput handleSearch={debounceFunc} />

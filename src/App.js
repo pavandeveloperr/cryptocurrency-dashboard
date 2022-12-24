@@ -11,7 +11,7 @@ function App() {
   return (
     <Provider store={store}>
       <CryptoProvider>
-      <div className="App">
+      <div className="scrollbar-thin scrollbar-thumb-teal-500 scrollbar-track-slate-700">
         <Dashboard />
       </div>
       </CryptoProvider>

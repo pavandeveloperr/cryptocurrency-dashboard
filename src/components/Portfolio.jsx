@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Chart, registerables } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import numeral from "numeral";
-import ChartDataLabels from "chartjs-plugin-datalabels";
 
 Chart.register(...registerables);
 
@@ -13,31 +11,13 @@ const options = {
       display: true,
       position: "right",
       labels: {
+        pointStyleWidth : 15,
         usePointStyle: true,
         pointStyle: "circle",
         padding: 20,
-        // margin: 5,
       },
-      // },
-      // title: {
-      //   display: false,
-      // },
-      // datalabels: {
-      //   display: false,
-      //   color: 'white',
-      //   align: 'top',
-      //   position: 'chartArea',
-      //   labels: {
-      //     title: {
-      //       font: {
-      //         weight: 'semibold',
-      //         size: 13,
-      //       },
     },
   },
-  //   formatter: (dataSet1) => numeral(dataSet1).format('$0,0'),
-  // },
-  // },
 };
 
 export const Portfolio = () => {
@@ -110,23 +90,6 @@ export const Portfolio = () => {
 
   return (
     <>
-      {/* <div className="flex rounded-lg bg-white shadow-lg">
-        <div>
-          <h1 className="grow font-semibold font-body mt-3 ml-5 mb-2">
-            Portfolio
-          </h1>{" "}
-          <div className="flex flex-col">
-          <span className="grow text-sm text-gray-400 text-end">
-            Total Value
-          </span>
-        </div>
-        <div>
-          <span className="text-xs font-semibold text-end text-black-900">
-            ${totalVolume}
-          </span>
-        </div>
-
-        </div> */}
       <div className="bg-white rounded-lg shadow-lg">
         <div className="mt-3">
           {" "}
@@ -142,10 +105,8 @@ export const Portfolio = () => {
 
         <div className="xl:w-[240px] xl:h-[180px] md:w-[220px] md:h-[20px] xl:ml-[100px] md:ml-[70px] w-[230px] h-[170px] ml-[30px] -mt-[15px]">
           <Pie
-            // style={{ width: '100%', height: '100%' }}
             data={data}
             options={options}
-            // plugins={[ChartDataLabels]}
           />
         </div>
         <div className="mt-7"> </div>
