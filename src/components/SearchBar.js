@@ -108,12 +108,12 @@ export const SearchBar = () => {
   return (
     <>
       <div className="flex">
-        <span className="flex shadow-lg rounded-lg">
+        <span className="flex shadow-md rounded-lg">
           <select
             value={currency}
             onChange={handleCurrency}
             ref={currencyRef}
-            className="outline-none font-body mr-1 pl-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer"
+            className="outline-none font-body mr-1 pl-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer bg-white"
           >
             <option value={"usd"}>USD</option>
             <option value={"inr"}>INR</option>
