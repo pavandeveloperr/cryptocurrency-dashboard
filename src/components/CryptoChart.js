@@ -54,16 +54,16 @@ export const CryptoChart = () => {
   }
 
   return (
-    <div className="container-fluid w-full h-96 bg-white my-5 rounded-lg shadow-sm px-4 pt-3 lg:mt-3">
+    <div className="container-fluid w-full h-96 border border-gray-100 bg-gray-200 bg-opacity-10 backdrop-blur-md my-5 rounded-lg shadow-sm px-4 pt-3 lg:mt-3">
       
-      <div className="flex py-0 pt-20 ml-6 mt-2 absolute text-md font-semibold">
+      <div className="text-gray-300 flex py-0 pt-20 ml-4 absolute text-md font-semibold">
           {currency.toUpperCase()}
         </div>
-      <div className="flex lg:gap-3 absolute items-center md:ml-16 sm:ml-28 ml-16 gap-2 lg:left-30 left-4 md:mt-3">
+      <div className="flex lg:gap-3 absolute items-center lg:ml-60 md:ml-16 sm:ml-28 ml-16 gap-2 lg:left-30 left-4 md:mt-3 lg:mt-3 sm:mt-3 mt-3">
 
         <button
           value={1}
-          className={`px-3 py-1 ${
+          className={`px-3 py-1.5 ${
             days === 1 ? " border-blue-500 border text-blue-600" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
           onClick={oneDay}
@@ -74,7 +74,7 @@ export const CryptoChart = () => {
         <button
           value={7}
           onClick={oneWeek}
-          className={`px-3 py-1 ${
+          className={`px-3 py-1.5 ${
             days === 7 ? " border-blue-500 border text-blue-600" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
         >
@@ -83,7 +83,7 @@ export const CryptoChart = () => {
         <button
           value={30}
           onClick={oneMonth}
-          className={`px-3 py-1 ${
+          className={`px-3 py-1.5 ${
             days === 30 ? " border-blue-500 border text-blue-600" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
         >
@@ -92,7 +92,7 @@ export const CryptoChart = () => {
         <button
           value={180}
           onClick={sixMonths}
-          className={`px-3 py-1 ${
+          className={`px-3 py-1.5 ${
             days === 180 ? " border-blue-500 border text-blue-600" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
           >
@@ -101,13 +101,13 @@ export const CryptoChart = () => {
         <button
           value={365}
           onClick={oneYear}
-          className={`px-3 py-1 ${
+          className={`px-3 py-1.5 ${
             days === 365 ? " border-blue-500 border text-blue-600" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
         >
           1Y
         </button>
-        <div className="flex absolute items-center rounded-md bg-gray-100 p-2 w-24 lg:left-[32rem] lg:mt-4 md:left-[25rem] md:mt-4 sm:right-[9rem] mt-20 ml-2">
+        <div className="flex absolute items-center rounded-md bg-gray-100 p-2 w-24 lg:left-[16rem] lg:mt-4 md:left-[25rem] md:mt-4 sm:right-[9rem] mt-20 ml-2">
           <select
             onChange={(e) => {
               setId(e.target.value);
@@ -154,8 +154,8 @@ export const CryptoChart = () => {
                   {
                     spanGaps: true,
                     id: 1,
-                    borderColor: "#1AA7EC",
-                    backgroundColor: "#1AA7EC",
+                    borderColor: "#000080",
+                    backgroundColor: "#000080",
                     pointBorderColor: "transparent",
                     pointBorderWidth: 3,
                     pointRadius: 0.2,
@@ -165,6 +165,7 @@ export const CryptoChart = () => {
                 ],
               }}
               options={{
+                color: "white",
                 responsive: true,
                 indexAxis: "x",
                 tension: 0.01,
@@ -182,6 +183,7 @@ export const CryptoChart = () => {
                       font: {
                         size: "10px",
                       },
+                      color: "white",
                     },
                   },
                   y: {
@@ -189,6 +191,9 @@ export const CryptoChart = () => {
                       border: false,
                       drawBorder: false,
                     },
+                    ticks : {
+                      color : "white"
+                    }
                   },
                 },
                 plugins: {
@@ -200,6 +205,7 @@ export const CryptoChart = () => {
                     display: true,
                     align : "end",
                     labels: {
+                      color : "white",
                       pointStyleWidth : 15,
                       usePointStyle: true,
                       pointStyle: "circle",
@@ -250,14 +256,21 @@ export const CryptoChart = () => {
                     },
                     ticks: {
                       maxTicksLimit: 20,
+                      color : "white",
                     },
                   },
+                  y : {
+                    ticks : {
+                      color : "white",
+                    }
+                  }
                 },
                 plugins: {
                   legend: {
                     display: true,
                     align: "end",
                       labels: {
+                        color : "white",
                         pointStyleWidth : 15,
                         usePointStyle: true,
                         pointStyle: "circle",
@@ -311,13 +324,22 @@ export const CryptoChart = () => {
                     grid: {
                       display: false,
                     },
+                    ticks : {
+                      color : "white",
+                    }
                   },
+                  y: {
+                    ticks : {
+                      color : "white",
+                    }
+                  }
                 },
                 plugins: {
                     legend: {
                       display: true,
                       align: "end",
                       labels: {
+                        color : "white",
                         pointStyleWidth : 15,
                         usePointStyle: true,
                         pointStyle: "circle",

@@ -8,9 +8,9 @@ export const SideBar = () => {
 
 
   return (
-    <div className="mb-7 bg-white rounded-lg shadow-lg">
+    <div className="bg-gray-300 bg-opacity-10 backdrop-blur-md border border-gray-100 rounded-lg shadow-lg">
       <div>
-        <p className="text-md text-center mt-4 font-semibold">
+        <p className="text-white text-md text-center mt-4 font-semibold">
           Cryptocurrency By Market Cap
         </p>
       </div>
@@ -47,7 +47,7 @@ export const SideBar = () => {
             width="1em"
             height="1em"
             viewBox="0 0 24 24"
-            className="w-full h-full fill-gray-600"
+            className="w-full h-full fill-gray-200"
             style={{
               msTransform: "rotate(360deg)",
               WebkitTransform: "rotate(360deg)",
@@ -71,7 +71,7 @@ export const SideBar = () => {
                 return (
                   <div
                     key={cryptoData.id}
-                    className="text-center text-lg border-b border-gray-100 hover:bg-gray-200 last:border-b-0"
+                    className="text-center text-lg border-b border-gray-100 hover:bg-gray-600 last:border-b-0"
                   >
                     <img
                       src={cryptoData.image}
@@ -79,7 +79,7 @@ export const SideBar = () => {
                       className="flex absolute w-[1.1rem] h-[1.1rem] ml-3 mt-2"
                     />
 
-                    <span className="flex flex-row pl-9 mt-2 text-[13px] font-semibold">
+                    <span className="flex flex-row pl-9 mt-2 text-[13px] font-semibold text-white">
                       {cryptoData.name}
                     </span>
 
@@ -87,8 +87,8 @@ export const SideBar = () => {
                       <div
                         className={`text-[12px] font-semibold ${
                           cryptoData.market_cap_change_percentage_24h > 0
-                            ? "text-green-700 "
-                            : "text-red-700 "
+                            ? "text-green-500 "
+                            : "text-red-500 "
                         }`}
                       >
                         <i
@@ -107,7 +107,7 @@ export const SideBar = () => {
                     </div>
 
                     <div className="-ml-9">
-                      <span className="text-[11px] -mt-8 ml-3 text-gray-500 font-semibold flex pl-8 mx-4 mb-4 truncate">
+                      <span className="text-[11px] -mt-8 ml-3 text-gray-200 font-semibold flex pl-8 mx-4 mb-4 truncate">
                         Mkt.Cap{" "}
                         {new Intl.NumberFormat("en-IN", {
                           style: "currency" ,

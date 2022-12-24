@@ -25,8 +25,8 @@ const SearchInput = ({ handleSearch }) => {
     <>
       <form className="flex pl-2 w-full font-body">
         <div className="flex flex-grow rounded-sm shadow-md">
-          <div className="flex flex-grow items-center">
-            <span className="absolute text-[13px] lg:text-[13px] sm:text-[12px] md:text-[14px] ml-6 text-gray-400">
+          <div className="flex flex-grow items-center text-white">
+            <span className="absolute text-[13px] lg:text-[13px] sm:text-[12px] md:text-[14px] ml-6 z-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"
@@ -35,7 +35,7 @@ const SearchInput = ({ handleSearch }) => {
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill="currentColor"
+                  fill="white"
                   d="m18.031 16.617l4.283 4.282l-1.415 1.415l-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9s9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7c-3.868 0-7 3.132-7 7c0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
                 />
               </svg>
@@ -47,8 +47,8 @@ const SearchInput = ({ handleSearch }) => {
               required
               value={searchText}
               onChange={handleInput}
-              className="flex shadow-lg focus-outlet-none focus:ring-2 invalid:bg-white-200
-               md:text-md sm:text-md w-full pl-14 py-3 pr-2 p border-gray-400 rounded-lg overflow-hidden focus-within:shadow-none outline-none sm:items-center"
+              className="flex border border-gray-100 shadow-lg focus:ring-1 bg-white bg-opacity-10 backdrop-blur-md
+               md:text-md sm:text-md w-full pl-14 py-3 pr-2 p rounded-lg overflow-hidden focus-within:shadow-none outline-none sm:items-center"
               placeholder="Search by coin"
             />
           </div>
@@ -57,7 +57,7 @@ const SearchInput = ({ handleSearch }) => {
       {searchText.length > 0 ? (
         <ul
           className="absolute top-14 -right-2 w-full h-96 rounded
-overflow-x-hidden py-2 bg-gray-200 bg-opacity-30 overflow-scroll
+overflow-x-hidden py-2 bg-gray-300 bg-opacity-60 overflow-scroll
 backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 z-10
 "
         >
@@ -113,21 +113,21 @@ export const SearchBar = () => {
             value={currency}
             onChange={handleCurrency}
             ref={currencyRef}
-            className="outline-none font-body mr-1 pl-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer bg-white"
+            className="border border-gray-100 text-gray-100 outline-none font-body pr-3 pl-5 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer bg-white bg-opacity-10 backdrop-blur-md z-1"
           >
-            <option value={"usd"}>USD</option>
-            <option value={"inr"}>INR</option>
-            <option value={"eur"}>EUR</option>
-            <option value={"jpy"}>JPY</option>
-            <option value={"aud"}>AUD</option>
-            <option value={"nzd"}>NZD</option>
-            <option value={"cad"}>CAD</option>
-            <option value={"gbp"}>GBP</option>
+            <option className="text-gray-600" value={"usd"}>USD</option>
+            <option className="text-gray-600" value={"inr"}>INR</option>
+            <option className="text-gray-600" value={"eur"}>EUR</option>
+            <option className="text-gray-600" value={"jpy"}>JPY</option>
+            <option className="text-gray-600" value={"aud"}>AUD</option>
+            <option className="text-gray-600" value={"nzd"}>NZD</option>
+            <option className="text-gray-600" value={"cad"}>CAD</option>
+            <option className="text-gray-600" value={"gbp"}>GBP</option>
           </select>
           <img
           src={selectIcon}
           alt="submit"
-          className=" w-[0.7rem] relative h-[1rem] top-4 right-[1.2rem] cursor-pointer"
+          className=" w-[0.7rem] relative h-[1rem] top-4 right-[0.9rem] cursor-pointer"
         />
           
         </span>
