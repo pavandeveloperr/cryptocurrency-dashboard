@@ -54,13 +54,12 @@ export const CryptoChart = () => {
   }
 
   return (
-    <div className="container-fluid w-full h-96 bg-white my-5 rounded-lg shadow-sm px-4 pt-3 mt-3 ">
+    <div className="container-fluid w-full h-96 bg-white my-5 rounded-lg shadow-sm px-4 pt-3 lg:mt-3">
       
       <div className="flex py-0 pt-20 ml-6 mt-2 absolute text-md font-semibold">
           {currency.toUpperCase()}
         </div>
-      <div className="flex lg:gap-3 absolute items-center ml-8 gap-2 lg:left-30 left-4">
-
+      <div className="flex lg:gap-3 absolute items-center md:ml-16 sm:ml-28 ml-16 gap-2 lg:left-30 left-4 md:mt-3">
 
         <button
           value={1}
@@ -108,7 +107,7 @@ export const CryptoChart = () => {
         >
           1Y
         </button>
-        <div className="flex absolute items-center rounded-md bg-gray-100 p-2 w-24 lg:mt-4 md:left-[20rem] md:mt-4 sm:right-[9rem] left-[2rem] mt-20 ml-2">
+        <div className="flex absolute items-center rounded-md bg-gray-100 p-2 w-24 lg:left-[32rem] lg:mt-4 md:left-[25rem] md:mt-4 sm:right-[9rem] mt-20 ml-2">
           <select
             onChange={(e) => {
               setId(e.target.value);
@@ -123,7 +122,7 @@ export const CryptoChart = () => {
               ))}
           </select>
 
-          <div className="rounded-md bg-gray-100 p-2 absolute lg:left-[10rem] lg:mt-1 md:left-[9rem] md:mt-1 left-[6rem] w-28 ml-5">
+          <div className="rounded-md bg-gray-100 p-2 absolute lg:left-[6rem] md:left-[6rem] left-[6rem] w-28 ml-5">
             <select
               onChange={(e) => setChartType(e.target.value)}
               className="bg-inherit outline-none w-full sm:justify-center"

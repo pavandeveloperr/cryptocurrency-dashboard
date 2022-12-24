@@ -8,18 +8,18 @@ export const SideBar = () => {
 
 
   return (
-    <div className="bg-white rounded-lg shadow-lg">
+    <div className="mb-7 bg-white rounded-lg shadow-lg">
       <div>
         <p className="text-md text-center mt-4 font-semibold">
           Cryptocurrency By Market Cap
         </p>
       </div>
 
-      <label className="flex justify-end mt-2 items-center">
+      <label className="flex relative justify-end mt-2 items-center">
         <select
           name="sortby"
           onChange={(e) => setSortBy(e.target.value)}
-          className="rounded bg-gray-100 text-[14px] mr-24 pr-4 pl-2 py-0.5 capitalize focus:outline-0 cursor-pointer"
+          className="rounded bg-gray-100 text-[14px] mr-20 pr-4 pl-2 py-0.5 capitalize focus:outline-0 cursor-pointer"
         >
           <option value="">Sort By</option>
           <option value="market_cap_desc">market cap desc</option>
@@ -35,11 +35,11 @@ export const SideBar = () => {
           src={selectIcon}
           alt="submit"
           className="w-[0.7rem] h-auto absolute 
-          right-[10.8rem] pointer-events-none"
+          right-[5.2rem] pointer-events-none"
         />
 
       <button
-          className="w-[1.6rem] flex ml-8 hover:scale-110 transition-all transition-ease"
+          className="w-[1.6rem] flex absolute hover:scale-110 transition-all transition-ease"
           onClick={resetFunction}
         >
           <svg
@@ -63,7 +63,7 @@ export const SideBar = () => {
         
       </label>
       
-      <div className="mt-4">
+      <div className="">
         {cryptoData ? (
           <table className="w-full table-auto">
             <tbody>
@@ -83,7 +83,7 @@ export const SideBar = () => {
                       {cryptoData.name}
                     </span>
 
-                    <div className="flex flex-row justify-end mr-5">
+                    <div className="flex flex-row justify-end mr-2">
                       <div
                         className={`text-[12px] font-semibold ${
                           cryptoData.market_cap_change_percentage_24h > 0
@@ -107,7 +107,7 @@ export const SideBar = () => {
                     </div>
 
                     <div className="-ml-9">
-                      <span className="text-[11px] -mt-8 ml-5 text-gray-500 font-semibold flex pl-8 mx-4 mb-4 truncate">
+                      <span className="text-[11px] -mt-8 ml-3 text-gray-500 font-semibold flex pl-8 mx-4 mb-4 truncate">
                         Mkt.Cap{" "}
                         {new Intl.NumberFormat("en-IN", {
                           style: "currency" ,

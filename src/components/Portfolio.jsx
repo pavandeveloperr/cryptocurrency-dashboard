@@ -90,11 +90,11 @@ export const Portfolio = () => {
 
   return (
     <>
-      <div className="bg-white rounded-lg shadow-lg">
+      <div className="bg-white rounded-lg shadow-lg mb-7">
         <div className="mt-3">
           {" "}
           <span className="text-lg font-semibold pt-6 ml-8">Portfolio </span>
-          <span className="text-gray-500 lg:ml-[100px] xl:ml-[160px] text-sm md:ml-[30px] sm:ml-[190px] ml-[20px]">
+          <span className="text-gray-500 lg:ml-[80px] xl:ml-[120px] text-sm md:ml-[70px] sm:ml-[180px] ml-[50px]">
             Total Value
           </span>{" "}
           <span className="text-xs font-semibold"> {new Intl.NumberFormat("en-IN", {
@@ -103,7 +103,7 @@ export const Portfolio = () => {
                         }).format(totalVolume)}</span>
         </div>
 
-        <div className="xl:w-[240px] xl:h-[180px] md:w-[220px] md:h-[20px] xl:ml-[100px] md:ml-[70px] w-[230px] h-[170px] ml-[30px] -mt-[15px]">
+        <div className="xl:w-[240px] xl:h-[180px] md:w-[240px] md:h-[20px] xl:ml-[100px] md:ml-[70px] w-[230px] h-[170px] ml-[60px] -mt-[15px]">
           <Pie
             data={data}
             options={options}

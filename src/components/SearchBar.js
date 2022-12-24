@@ -108,12 +108,12 @@ export const SearchBar = () => {
   return (
     <>
       <div className="flex">
-        <span className="flex shadow-lg lg:bg-white md:bg-white sm:bg-white bg-white rounded-lg">
+        <span className="flex shadow-lg rounded-lg">
           <select
             value={currency}
             onChange={handleCurrency}
             ref={currencyRef}
-            className="outline-none font-body mr-1 pl-6 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer"
+            className="outline-none font-body mr-1 pl-3 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer"
           >
             <option value={"usd"}>USD</option>
             <option value={"inr"}>INR</option>
@@ -124,12 +124,14 @@ export const SearchBar = () => {
             <option value={"cad"}>CAD</option>
             <option value={"gbp"}>GBP</option>
           </select>
-        </span>
-        <img
+          <img
           src={selectIcon}
           alt="submit"
-          className=" w-[0.7rem] relative h-[0.9rem] top-4 right-[1.2rem]"
+          className=" w-[0.7rem] relative h-[1rem] top-4 right-[1.2rem] cursor-pointer"
         />
+          
+        </span>
+        
 
         <div className="relative w-full">
           <SearchInput handleSearch={debounceFunc} />

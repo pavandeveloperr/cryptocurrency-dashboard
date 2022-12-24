@@ -4,7 +4,7 @@ import exchangeReducer from "./exchangeReducer";
 
 const rootReducer = combineReducers ({
     default : defaultReducer,
-    exchange : exchangeReducer,
+    exchange : exchangeReducer    
 })
 
 

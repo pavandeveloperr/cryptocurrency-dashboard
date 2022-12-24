@@ -47,8 +47,8 @@ function Dashboard() {
       ) : (
         <>
           <div className="py-4 px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
-              <div className="md:col-span-3 container-fluid">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 sm:grid-cols-1 gap-2">
+              <div className="md:col-span-3 grid-cols-3 sm:grid-cols-3 container-fluid">
                 <SearchBar />
                 <CryptoChart />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
