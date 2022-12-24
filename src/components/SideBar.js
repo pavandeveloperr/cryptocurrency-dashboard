@@ -21,6 +21,7 @@ export const SideBar = () => {
           onChange={(e) => setSortBy(e.target.value)}
           className="rounded bg-gray-100 text-[14px] mr-24 pr-4 pl-2 py-0.5 capitalize focus:outline-0 cursor-pointer"
         >
+          <option value="">Sort By</option>
           <option value="market_cap_desc">market cap desc</option>
           <option value="market_cap_asc">market cap asc</option>
           <option value="volume_desc">volume desc</option>
