@@ -12,6 +12,7 @@ const options = {
       display: true,
       position: "right",
       labels: {
+        color : "white",
         pointStyleWidth : 15,
         usePointStyle: true,
         pointStyle: "circle",

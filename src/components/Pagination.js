@@ -103,7 +103,7 @@ const Pagination = () => {
               {" "}
               <button
                 onClick={multiStepNext}
-                className="ouline-0 hover:text-blue-300  rounded-full w-8 h-8 flex items-center justify-center text-lg    "
+                className="ouline-0 hover:text-blue-300  rounded-full w-8 h-8 flex items-center justify-center text-lg text-white"
               >
                 ...
               </button>

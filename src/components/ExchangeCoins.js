@@ -42,17 +42,10 @@ export const ExchangeCoins = () => {
                 <p className="text-red-500 font-semibold mr-3 text-xs">Sell</p>
                 <select
                     onChange={(e) => setvalue1(e.target.value)}
-                    className="lg:pl-8 w-[130px] h-[2rem] font-semibold rounded-lg p-1 text-gray-600 bg-gray-100 focus:ring-2 focus:outline-none px-5 inline-flex cursor-pointer"
+                    className="lg:pl-8 w-[130px] h-[2rem] font-semibold rounded-lg p-1 text-white bg-gray-100 bg-opacity-30 backdrop-blur-md focus:ring-2 focus:outline-none px-5 inline-flex cursor-pointer"
                 >
                     {coin && Object.values(coin).map((d, k) => (
-                        <option key={k} value={d.value} className='py-2
-                        px-4
-                        font-normal
-                        block
-                        w-full
-                        bg-white
-                        text-gray-700
-                        hover:bg-gray-100'>
+                        <option key={k} value={d.value} className='text-gray-600'>
                             {d.name}
                         </option>
                     ))}
@@ -64,10 +57,10 @@ export const ExchangeCoins = () => {
                 <p className="text-green-300 font-semibold mr-3 text-xs">Buy</p>
                 <select
                     onChange={(e) => setvalue2(e.target.value)}
-                    className="lg:pl-8 w-[130px] h-[2rem] font-semibold rounded-lg text-gray-600 bg-gray-100 focus:ring-2 focus:outline-none px-5 items-center cursor-pointer"
+                    className="lg:pl-8 w-[130px] h-[2rem] font-semibold rounded-lg text-white bg-gray-100 bg-opacity-30 backdrop-blur-md focus:ring-2 focus:outline-none px-5 items-center cursor-pointer"
                 >
                     {coin && Object.values(coin).map((d, k) => (
-                        <option key={k} value={d.value} className='bg-white'>
+                        <option key={k} value={d.value} className='text-gray-600'>
                            {d.name}
                         </option>
                     ))}
@@ -84,7 +77,7 @@ export const ExchangeCoins = () => {
                 <input
                     type="email"
                     name="email"
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 rounded border border-gray-400 px-3 py-1 text-sm outline-none pt-2 pb-2"
+                    className="appearance-none block w-full bg-gray-100 bg-opacity-20 backdrop-blur-md text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 rounded border border-gray-400 px-3 py-1 text-sm outline-none pt-2 pb-2"
                     placeholder=""
                     value={text1 || ""}
                     onChange={(e) => settext1(e.target.value)}

@@ -19,17 +19,17 @@ export const SideBar = () => {
         <select
           name="sortby"
           onChange={(e) => setSortBy(e.target.value)}
-          className="rounded bg-gray-100 text-[14px] mr-20 pr-4 pl-2 py-0.5 capitalize focus:outline-0 cursor-pointer"
+          className="rounded text-white bg-gray-100 bg-opacity-30 backdrop-blur-md text-[14px] mr-20 pr-4 pl-2 py-0.5 capitalize focus:outline-0 cursor-pointer"
         >
-          <option value="">Sort By</option>
-          <option value="market_cap_desc">market cap desc</option>
-          <option value="market_cap_asc">market cap asc</option>
-          <option value="volume_desc">volume desc</option>
-          <option value="volume_asc">volume asc</option>
-          <option value="id_desc">id desc</option>
-          <option value="id_asc">id asc</option>
-          <option value="gecko_desc">gecko desc</option>
-          <option value="gecko_asc">gecko asc</option>
+          <option className="text-gray-600" value="">Sort By</option>
+          <option className="text-gray-600" value="market_cap_desc">market cap desc</option>
+          <option className="text-gray-600" value="market_cap_asc">market cap asc</option>
+          <option className="text-gray-600" value="volume_desc">volume desc</option>
+          <option className="text-gray-600" value="volume_asc">volume asc</option>
+          <option className="text-gray-600" value="id_desc">id desc</option>
+          <option className="text-gray-600" value="id_asc">id asc</option>
+          <option className="text-gray-600" value="gecko_desc">gecko desc</option>
+          <option className="text-gray-600" value="gecko_asc">gecko asc</option>
         </select>
         <img
           src={selectIcon}
@@ -88,7 +88,7 @@ export const SideBar = () => {
                         className={`text-[12px] font-semibold ${
                           cryptoData.market_cap_change_percentage_24h > 0
                             ? "text-green-500 "
-                            : "text-red-500 "
+                            : "text-orange-400 "
                         }`}
                       >
                         <i
