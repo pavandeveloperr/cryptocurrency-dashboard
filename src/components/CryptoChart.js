@@ -1,14 +1,13 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Line } from "react-chartjs-2";
-import { Bar } from "react-chartjs-2";
-
+import { Line, Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import { CryptoContext } from "../context/CryptoContext";
+import selectIcon from "../assets/select-icon.svg";
 
 Chart.register(...registerables);
 
 export const CryptoChart = () => {
-  const { currency, cryptoId} = useContext(CryptoContext);
+  const { currency, cryptoId } = useContext(CryptoContext);
   const [chartData, setChartData] = useState([]);
   const [days, setDays] = useState(2);
   const [id, setId] = useState("bitcoin");
@@ -59,13 +58,13 @@ export const CryptoChart = () => {
       <div className="text-gray-300 flex py-0 pt-20 ml-4 absolute text-md font-semibold">
           {currency.toUpperCase()}
         </div>
-      <div className="flex lg:gap-3 absolute items-center lg:ml-60 md:ml-16 sm:ml-28 ml-16 gap-2 lg:left-30 left-4 md:mt-3 lg:mt-3 sm:mt-3 mt-3">
+      <div className="flex lg:gap-3 absolute items-center lg:ml-48 md:ml-16 sm:ml-28 ml-16 gap-2 lg:left-34 left-4 md:mt-3 lg:mt-3 sm:mt-3 mt-3">
 
         <button
           value={1}
           className={`px-3 py-1.5 ${
             days === 1 ? " border-blue-500 border text-blue-600" : ""
-          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
+          } rounded-md text-xs text-white bg-gray-100 bg-opacity-30 backdrop-blur-md font-semibold lg:mt-2`}
           onClick={oneDay}
         >
           1D
@@ -76,7 +75,7 @@ export const CryptoChart = () => {
           onClick={oneWeek}
           className={`px-3 py-1.5 ${
             days === 7 ? " border-blue-500 border text-blue-600" : ""
-          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
+          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1W
         </button>
@@ -85,7 +84,7 @@ export const CryptoChart = () => {
           onClick={oneMonth}
           className={`px-3 py-1.5 ${
             days === 30 ? " border-blue-500 border text-blue-600" : ""
-          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
+          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1M
         </button>
@@ -94,7 +93,7 @@ export const CryptoChart = () => {
           onClick={sixMonths}
           className={`px-3 py-1.5 ${
             days === 180 ? " border-blue-500 border text-blue-600" : ""
-          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
+          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
           >
           6M
         </button>
@@ -103,34 +102,42 @@ export const CryptoChart = () => {
           onClick={oneYear}
           className={`px-3 py-1.5 ${
             days === 365 ? " border-blue-500 border text-blue-600" : ""
-          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2`}
+          } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1Y
         </button>
-        <div className="flex absolute items-center rounded-md bg-gray-100 p-2 w-24 lg:left-[16rem] lg:mt-4 md:left-[25rem] md:mt-4 sm:right-[9rem] mt-20 ml-2">
+        <div className="flex absolute items-center rounded-md bg-gray-100 text-white bg-opacity-30 backdrop-blur-md p-2 w-24 lg:left-[16rem] lg:mt-4 md:left-[25rem] md:mt-4 sm:right-[9rem] mt-20 ml-2">
           <select
             onChange={(e) => {
               setId(e.target.value);
             }}
-            className="w-full text-transform: capitalize bg-inherit outline-none"
+            className="w-full bg-transparent text-transform: capitalize outline-none -mr-2"
           >
             {cryptoId &&
               Object.values(cryptoId).map((d, k) => (
-                <option key={k} value={d.id} name={d.name}>
+                <option key={k} value={d.id} name={d.name} className="text-gray-600">
                   {d.id}
                 </option>
               ))}
           </select>
+          <span>
+          <img src={selectIcon} alt="selecticon" className="w-[0.7rem] h-auto relative lg:right-[0.4rem] right-[0.4rem] sm:right-[0.4rem] pointer-events-none" />
+          </span>
 
-          <div className="rounded-md bg-gray-100 p-2 absolute lg:left-[6rem] md:left-[6rem] left-[6rem] w-28 ml-5">
+          <div className="rounded-md bg-gray-100 bg-opacity-30 backdrop-blur-md text-white p-2 absolute lg:left-[6rem] md:left-[6rem] left-[6rem] w-28 ml-5">
             <select
               onChange={(e) => setChartType(e.target.value)}
-              className="bg-inherit outline-none w-full sm:justify-center"
+              className="text-white bg-transparent outline-none w-full sm:justify-center"
             >
-              <option value={`LineChart`}>Line Chart</option>
-              <option value={`BarChart`}>Bar Chart</option>
-              <option value={`BarChartH`}>Bar Chart Horizontal</option>
+              <option className="text-gray-600" value={`LineChart`}>Line Chart</option>
+              <option className="text-gray-600" value={`BarChart`}>Bar Chart</option>
+              <option className="text-gray-600" value={`BarChartH`}>Bar Chart Horizontal</option>
+             
             </select>
+            <span className="absolute top-[0.9rem] right-[0.7rem] w-[0.7rem] h-auto">
+          <img src={selectIcon} alt="selecticon" className="lg:right-[0.4rem] right-[0.4rem] sm:right-[0.4rem] pointer-events-none" />
+          </span>
+            
           </div>
         </div>
       </div>
@@ -154,8 +161,8 @@ export const CryptoChart = () => {
                   {
                     spanGaps: true,
                     id: 1,
-                    borderColor: "#000080",
-                    backgroundColor: "#000080",
+                    borderColor: "#FFA500",
+                    backgroundColor: "#FFA500",
                     pointBorderColor: "transparent",
                     pointBorderWidth: 3,
                     pointRadius: 0.2,

@@ -113,7 +113,7 @@ export const SearchBar = () => {
             value={currency}
             onChange={handleCurrency}
             ref={currencyRef}
-            className="border border-gray-100 text-gray-100 outline-none font-body pr-3 pl-5 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer bg-white bg-opacity-10 backdrop-blur-md z-1"
+            className="border border-gray-100 text-gray-100 outline-none font-body pr-3 pl-2 rounded-lg w-[90px] md:w-[90px] sm:w-[90px] cursor-pointer bg-white bg-opacity-10 backdrop-blur-md z-1"
           >
             <option className="text-gray-600" value={"usd"}>USD</option>
             <option className="text-gray-600" value={"inr"}>INR</option>
