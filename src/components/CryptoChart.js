@@ -63,7 +63,7 @@ export const CryptoChart = () => {
         <button
           value={1}
           className={`px-3 py-1.5 ${
-            days === 1 ? " border-blue-500 border text-blue-600" : ""
+            days === 1 ? " border-black border text-black" : ""
           } rounded-md text-xs text-white bg-gray-100 bg-opacity-30 backdrop-blur-md font-semibold lg:mt-2`}
           onClick={oneDay}
         >
@@ -74,7 +74,7 @@ export const CryptoChart = () => {
           value={7}
           onClick={oneWeek}
           className={`px-3 py-1.5 ${
-            days === 7 ? " border-blue-500 border text-blue-600" : ""
+            days === 7 ? " border-black border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1W
@@ -83,7 +83,7 @@ export const CryptoChart = () => {
           value={30}
           onClick={oneMonth}
           className={`px-3 py-1.5 ${
-            days === 30 ? " border-blue-500 border text-blue-600" : ""
+            days === 30 ? " border-black border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1M
@@ -92,7 +92,7 @@ export const CryptoChart = () => {
           value={180}
           onClick={sixMonths}
           className={`px-3 py-1.5 ${
-            days === 180 ? " border-blue-500 border text-blue-600" : ""
+            days === 180 ? " border-black border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
           >
           6M
@@ -101,7 +101,7 @@ export const CryptoChart = () => {
           value={365}
           onClick={oneYear}
           className={`px-3 py-1.5 ${
-            days === 365 ? " border-blue-500 border text-blue-600" : ""
+            days === 365 ? " border-black border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1Y
@@ -248,8 +248,8 @@ export const CryptoChart = () => {
                   {
                     label: `${id} in ${currency}`,
                     data: ChartData.map((val) => val.y),
-                    borderColor: "#1AA7EC",
-                    backgroundColor: "#1AA7EC",
+                    borderColor: "#FFA500",
+                    backgroundColor: "#FFA500",
                   },
                 ],
               }}
@@ -313,8 +313,8 @@ export const CryptoChart = () => {
                   {
                     label: `${id} in ${currency}`,
                     data: ChartData.map((val) => val.y),
-                    borderColor: "#1AA7EC",
-                    backgroundColor: "#1AA7EC",
+                    borderColor: "#FFA500",
+                    backgroundColor: "#FFA500",
                   },
                 ],
               }}

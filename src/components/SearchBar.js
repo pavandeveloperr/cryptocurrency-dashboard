@@ -2,11 +2,11 @@ import debounce from "lodash.debounce";
 import React, { useContext, useRef, useState } from "react";
 import { CryptoContext } from "../context/CryptoContext";
 import selectIcon from "../assets/select-icon.svg";
+import "../App.css";
 
 const SearchInput = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
-  const { searchData, setCoinSearch, setSearchData } =
-    useContext(CryptoContext);
+  const { searchData, setCoinSearch, setSearchData } =  useContext(CryptoContext);
 
   let handleInput = (e) => {
     e.preventDefault();
@@ -56,9 +56,10 @@ const SearchInput = ({ handleSearch }) => {
       </form>
       {searchText.length > 0 ? (
         <ul
-          className="absolute top-14 -right-2 w-full h-96 rounded
+        id="searchbar"
+          className="absolute top-14 -right-2 w-full h-96 mr-2 rounded
 overflow-x-hidden py-2 bg-gray-300 bg-opacity-60 overflow-scroll
-backdrop-blur-md scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100 z-10
+backdrop-blur-md z-10
 "
         >
           {searchData ? (

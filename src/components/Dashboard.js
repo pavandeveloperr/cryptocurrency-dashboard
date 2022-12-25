@@ -9,7 +9,7 @@ import { SearchBar } from "./SearchBar";
 import { Footer } from "./footer";
 import { useState } from "react";
 import Lottie from "lottie-react";
-
+import { Header } from "./Header";
 import * as bitcoin from "../92445-crypto-bitcoin.json";
 import * as success from "../1127-success.json";
 
@@ -47,6 +47,9 @@ function Dashboard() {
         </>
       ) : (
         <>
+        <div className="bg-gradient-to-r from-[#2A5470] to-[#4C4177] flex bg-opacity-10 backdrop-blur-md">
+        <Header />
+        </div>
           <div className="py-4 px-4 bg-gradient-to-r from-[#2A5470] to-[#4C4177] bg-opacity-60 backdrop-blur-md">
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 sm:grid-cols-1 gap-2">
               <div className="md:col-span-3 grid-cols-3 sm:grid-cols-3 container-fluid">
