@@ -10,8 +10,8 @@ import { Footer } from "./footer";
 import { useState } from "react";
 import Lottie from "lottie-react";
 import { Header } from "./Header";
-import * as bitcoin from "../92445-crypto-bitcoin.json";
-import * as success from "../1127-success.json";
+import * as bitcoin from "../assets/92445-crypto-bitcoin.json";
+import * as success from "../assets/1127-success.json";
 
 function Dashboard() {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ function Dashboard() {
     <>
       {!completed ? (
         <>
-          <div className="lg:w-[350px] lg:ml-[450px] lg:mt-[100px] w-[200px] mt-[150px] ml-[100px] sm:mt-[90px] sm:ml-[60px] sm:w-[40px] md:mt-[90px] md:ml-[230px] md:w-[300px]">
+          <div className="lg:mt-[10rem] lg:ml-[25rem] lg:pl-[6rem] w-[10rem] mt-[13rem] ml-[6.5rem] sm:mt-[190px] sm:ml-[15rem] sm:w-[10rem] md:mt-[15rem] md:ml-[17rem] md:w-[15rem]">
             {!loading ? (
               <Lottie animationData={bitcoin} />
             ) : (
