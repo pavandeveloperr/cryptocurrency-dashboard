@@ -58,7 +58,7 @@ const SearchInput = ({ handleSearch }) => {
         <ul
         id="searchbar"
           className="absolute top-14 -right-2 w-full h-96 mr-2 rounded
-overflow-x-hidden py-2 bg-gray-300 bg-opacity-60 overflow-scroll
+overflow-x-hidden py-2 bg-gray-300 bg-opacity-60 overflow-scroll scrollbar-thin
 backdrop-blur-md z-10
 "
         >

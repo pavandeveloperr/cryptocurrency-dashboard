@@ -63,7 +63,7 @@ export const CryptoChart = () => {
         <button
           value={1}
           className={`px-3 py-1.5 ${
-            days === 1 ? " border-black border text-black" : ""
+            days === 1 ? " border-white border text-black" : ""
           } rounded-md text-xs text-white bg-gray-100 bg-opacity-30 backdrop-blur-md font-semibold lg:mt-2`}
           onClick={oneDay}
         >
@@ -74,7 +74,7 @@ export const CryptoChart = () => {
           value={7}
           onClick={oneWeek}
           className={`px-3 py-1.5 ${
-            days === 7 ? " border-black border text-black" : ""
+            days === 7 ? " border-white border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1W
@@ -83,7 +83,7 @@ export const CryptoChart = () => {
           value={30}
           onClick={oneMonth}
           className={`px-3 py-1.5 ${
-            days === 30 ? " border-black border text-black" : ""
+            days === 30 ? " border-white border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1M
@@ -92,7 +92,7 @@ export const CryptoChart = () => {
           value={180}
           onClick={sixMonths}
           className={`px-3 py-1.5 ${
-            days === 180 ? " border-black border text-black" : ""
+            days === 180 ? " border-white border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
           >
           6M
@@ -101,7 +101,7 @@ export const CryptoChart = () => {
           value={365}
           onClick={oneYear}
           className={`px-3 py-1.5 ${
-            days === 365 ? " border-black border text-black" : ""
+            days === 365 ? " border-white border text-black" : ""
           } rounded-md text-xs bg-gray-100 font-semibold lg:mt-2 text-white bg-opacity-30 backdrop-blur-md`}
         >
           1Y
@@ -155,7 +155,11 @@ export const CryptoChart = () => {
                     date.getHours() > 12
                       ? `${date.getHours() - 12}:${date.getMinutes()}PM`
                       : `${date.getHours()}:${date.getMinutes()}AM`;
-                  return days === 1 ? time : date.toLocaleDateString();
+                  return days === 1 ? time : date.toLocaleDateString("default",{
+                    month:"short",
+                    day: "numeric",
+                    year : "numeric"
+                  });
                 }),
                 datasets: [
                   {
@@ -186,7 +190,7 @@ export const CryptoChart = () => {
                     },
                     ticks: {
                       source: "auto",
-                      maxTicksLimit: 10,
+                      maxTicksLimit: 20,
                       font: {
                         size: "10px",
                       },
@@ -242,7 +246,11 @@ export const CryptoChart = () => {
                     date.getHours() > 12
                       ? `${date.getHours() - 12}:${date.getMinutes()}PM`
                       : `${date.getHours()}:${date.getMinutes()}AM`;
-                  return days === 1 ? time : date.toLocaleDateString();
+                  return days === 1 ? time : date.toLocaleDateString("default",{
+                    month:"short",
+                    day: "numeric",
+                    year : "numeric"
+                  });
                 }),
                 datasets: [
                   {
@@ -307,7 +315,11 @@ export const CryptoChart = () => {
                     date.getHours() > 12
                       ? `${date.getHours() - 12}:${date.getMinutes()}PM`
                       : `${date.getHours()}:${date.getMinutes()}AM`;
-                  return days === 1 ? time : date.toLocaleDateString();
+                  return days === 1 ? time : date.toLocaleDateString("default",{
+                    month:"short",
+                    day: "numeric",
+                    year : "numeric"
+                  });
                 }),
                 datasets: [
                   {
