@@ -75,8 +75,7 @@ export const ExchangeCoins = () => {
                 </label>
                 <div className='mr-[90px] lg:w-[90px] md:w-full sm:w-[90px] w-full py-2'>
                 <input
-                    type="email"
-                    name="email"
+                    type="number"
                     className="appearance-none block w-full bg-gray-100 bg-opacity-20 backdrop-blur-md text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 rounded border border-gray-400 px-3 py-1 text-sm outline-none pt-2 pb-2"
                     placeholder=""
                     value={text1 || ""}
