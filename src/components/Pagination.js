@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import paginationArrow from "../assets/pagination-arrow.svg";
 import { CryptoContext } from "../context/CryptoContext";
 
+
+//pagination component resides in the sidebar component 
 const Pagination = () => {
   const { cryptoData } = useContext(CryptoContext);
 

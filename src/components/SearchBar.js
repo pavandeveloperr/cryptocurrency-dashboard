@@ -4,6 +4,7 @@ import { CryptoContext } from "../context/CryptoContext";
 import selectIcon from "../assets/select-icon.svg";
 import "../App.css";
 
+// user can search cryptos which will result in sidebar
 const SearchInput = ({ handleSearch }) => {
   const [searchText, setSearchText] = useState("");
   const { searchData, setCoinSearch, setSearchData } =  useContext(CryptoContext);

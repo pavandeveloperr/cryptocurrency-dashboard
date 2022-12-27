@@ -3,25 +3,30 @@ import { CryptoContext } from "../context/CryptoContext";
 import selectIcon from "../assets/select-icon.svg";
 import Pagination from "./Pagination";
 
+
+//sidebar contains crypto details such as name, market cap , and 24h price change
+//also contains filter options like sorting and reset button
 export const SideBar = () => {
   const { cryptoData, setSortBy, resetFunction, currency } = useContext(CryptoContext);
 
 
   return (
     <div className="bg-gray-300 bg-opacity-10 backdrop-blur-md border border-gray-100 rounded-lg shadow-lg">
-      <div>
+      <div data-testid="Sidebar-1">
         <p className="text-white text-md text-center mt-4 font-semibold">
           Cryptocurrency By Market Cap
         </p>
       </div>
 
-      <label className="flex relative justify-end mt-2 items-center">
+      {/* user can sort between cryptocurrencies */}
+      <label className="flex relative justify-end mt-2 items-center ">
         <select
+          id="Sorting Options"
           name="sortby"
           onChange={(e) => setSortBy(e.target.value)}
           className="rounded text-white bg-gray-100 bg-opacity-30 backdrop-blur-md text-[14px] mr-20 pr-4 pl-2 py-0.5 capitalize focus:outline-0 cursor-pointer"
         >
-          <option className="text-gray-600" value="">Sort By</option>
+          <option className="text-gray-600" value="">sortby</option>
           <option className="text-gray-600" value="market_cap_desc">market cap desc</option>
           <option className="text-gray-600" value="market_cap_asc">market cap asc</option>
           <option className="text-gray-600" value="volume_desc">volume desc</option>
@@ -38,6 +43,7 @@ export const SideBar = () => {
           right-[5.2rem] pointer-events-none"
         />
 
+      {/* user can reset the sidebar with reset button */}
       <button
           className="w-[1.6rem] flex absolute hover:scale-110 transition-all transition-ease"
           onClick={resetFunction}
@@ -63,7 +69,7 @@ export const SideBar = () => {
         
       </label>
       
-      <div className="">
+      <div>
         {cryptoData ? (
           <table className="w-full table-auto">
             <tbody>

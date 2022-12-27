@@ -6,6 +6,7 @@ import selectIcon from "../assets/select-icon.svg";
 
 Chart.register(...registerables);
 
+//this component contains charts , dropdowns and buttons related to charts
 export const CryptoChart = () => {
   const { currency, cryptoId } = useContext(CryptoContext);
   const [chartData, setChartData] = useState([]);
@@ -20,7 +21,7 @@ export const CryptoChart = () => {
     ).then((response) => {
       const res = response.json();
       res.then((data) => {
-        console.log("chartData", data);
+        // console.log("chartData", data);
         setChartData(data.prices);
       });
     });
@@ -106,6 +107,7 @@ export const CryptoChart = () => {
         >
           1Y
         </button>
+        {/* this menu contains cryptocurrencies */}
         <div className="flex absolute items-center rounded-md bg-gray-100 text-white bg-opacity-30 backdrop-blur-md p-2 w-24 lg:left-[16rem] lg:mt-4 md:left-[25rem] md:mt-4 sm:right-[9rem] mt-20 ml-2">
           <select
             onChange={(e) => {
@@ -123,7 +125,7 @@ export const CryptoChart = () => {
           <span>
           <img src={selectIcon} alt="selecticon" className="w-[0.7rem] h-auto relative lg:right-[0.4rem] right-[0.4rem] sm:right-[0.4rem] pointer-events-none" />
           </span>
-
+          {/* user can select different types of charts */}
           <div className="rounded-md bg-gray-100 bg-opacity-30 backdrop-blur-md text-white p-2 absolute lg:left-[6rem] md:left-[6rem] left-[6rem] w-28 ml-5">
             <select
               onChange={(e) => setChartType(e.target.value)}

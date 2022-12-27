@@ -96,7 +96,7 @@ export const Portfolio = () => {
           <span className="text-lg text-white font-semibold pt-6 ml-8">
             Portfolio{" "}
           </span>
-          <span className="text-gray-300 lg:ml-[80px] xl:ml-[120px] text-sm md:ml-[70px] sm:ml-[180px] ml-[50px]">
+          <span className="text-gray-300 lg:ml-[80px] xl:ml-[120px] text-sm md:ml-[70px] sm:ml-[10px] ml-[50px]">
             Total Value
           </span>{" "}
           <span className="text-xs font-semibold text-gray-100">

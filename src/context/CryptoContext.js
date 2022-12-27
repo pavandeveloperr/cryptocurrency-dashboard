@@ -3,7 +3,8 @@ import { createContext, useLayoutEffect, useState } from "react";
 //create context object
 export const CryptoContext = createContext({});
 
-//create the provider component
+//cryptoContext component contains api data of cryptocoins, cryptoId and search cryptos
+// and there states as well
 export const CryptoProvider = ({ children }) => {
   const [cryptoId, setCryptoId] = useState();
   const [cryptoData, setCryptoData] = useState();

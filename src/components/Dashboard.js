@@ -13,6 +13,7 @@ import { Header } from "./Header";
 import * as bitcoin from "../assets/92445-crypto-bitcoin.json";
 import * as success from "../assets/1127-success.json";
 
+//Dashboard is the parent component 
 function Dashboard() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.default);

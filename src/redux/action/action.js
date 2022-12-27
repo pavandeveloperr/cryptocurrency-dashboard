@@ -1,5 +1,5 @@
-import axios from "axios"
-import actionTypes from "./types"
+import axios from "axios";
+import actionTypes from "./types";
 
 export const fetchCoins = () => {
       return (dispatch) => {

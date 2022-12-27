@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { fetchCoinList } from '../redux/action/action';
 import selectIcon from "../assets/select-icon.svg";
 
+//user can exchange between cryptocurrencies
 export const ExchangeCoins = () => {
   const dispatch = useDispatch();
   const exchangeData = useSelector((state) => state.exchange);
