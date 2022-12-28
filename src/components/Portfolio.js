@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Chart, registerables } from "chart.js";
 import { Pie } from "react-chartjs-2";
+import { useContext } from "react";
+import { CryptoContext } from "../context/CryptoContext";
 
 Chart.register(...registerables);
 
@@ -22,6 +24,7 @@ const options = {
 };
 
 export const Portfolio = () => {
+  const {currency} = useContext(CryptoContext);
   const [totalVolume, setTotalVolume] = useState("");
   const [data, setData] = useState({
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -42,11 +45,11 @@ export const Portfolio = () => {
         borderWidth: 1,
       },
     ],
-  });
+  }); 
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=tether%2Cethereum%2Cbitcoin&order=market_cap_desc`;
+      const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=tether%2Cethereum%2Cbitcoin&order=market_cap_desc`;
       const labelSet = [];
       const dataSet1 = [];
       await fetch(url)
@@ -103,7 +106,7 @@ export const Portfolio = () => {
             {" "}
             {new Intl.NumberFormat("en-IN", {
               style: "currency",
-              currency: "usd",
+              currency: currency,
             }).format(totalVolume)}
           </span>
         </div>
