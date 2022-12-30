@@ -36,7 +36,7 @@ export const ExchangeCoins = () => {
 
   return (
     <div className="px-4 py-4 font-body bg-white bg-opacity-10 backdrop-blur-md rounded-lg border border-gray-200 shadow-lg items-center">
-    <h4 className="text-white text-lg font-semibold ml-5">ExchangeCoins</h4>
+    <h4 className="text-white text-lg font-semibold ml-5">Exchange Coins</h4>
     <div className="flex flex-row mt-8">
         <div className="pr-4 items-center">
             <div className="flex my-1 content-center items-center py-1 px-2 lg:ml-3">
