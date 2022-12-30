@@ -10,13 +10,13 @@ export const Footer = () => {
             <a
               class="link"
               href="https://github.com/pavandeveloperr"
-              className="hover:underline hover:text-gray-600"
+              className="hover:underline hover:text-blue-400"
             >
               Pavan Kulkarni{" "}
             </a>
           </h3>
         </div>
-        <div className='flex absolute -mt-4 items-center'>
+        <div className='flex absolute -mt-3 items-center'>
             <h3 className='text-[8px] text-gray-300'>Data Provided By CoinGeckoAPI</h3>
         </div>
       </footer>

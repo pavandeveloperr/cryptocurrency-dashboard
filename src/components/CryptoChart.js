@@ -171,7 +171,7 @@ export const CryptoChart = () => {
                     backgroundColor: "#FFA500",
                     pointBorderColor: "transparent",
                     pointBorderWidth: 3,
-                    pointRadius: 0.2,
+                    pointRadius: 2,
                     label: `${id} in ${currency}`,
                     data: ChartData.map((val) => val.y),
                   },
