@@ -31,7 +31,7 @@ function Dashboard() {
           setCompleted(true);
         }, 1000);
       }
-    }, 5000);
+    }, 2500);
   }, [data.coinList.length, dispatch]);
 
   return (
