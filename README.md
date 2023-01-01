@@ -39,7 +39,7 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 <!-- FEATURES -->
 
 ## **FEATURES**
-- user can view data on line or bar graphs
+- user can view data visuals through dynamic graphs
 - user can search cryptos 
 - user can sort cryptos
 - user can view Live previews of cryptos
