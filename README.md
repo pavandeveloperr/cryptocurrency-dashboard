@@ -76,12 +76,11 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 ```bash
   git clone https://github.com/pavandeveloperr/cryptocurrency-dashboard.git
 ```
-
+- Open your favorite code editor and run locally!
 ```bash
   npm install
   npm start
 ```
-- Open your favorite code editor and run locally!
 - Go to browser and search localhost:3000
 
 <br />
