@@ -83,11 +83,12 @@ backdrop-blur-md z-10
                 className="w-8 h-8 flex border-4 border-gray-600 rounded-full border-b-gray-200 animate-spin"
                 role="status"
               />
-              <span className="ml-2">Searching...</span>
+              <span className="ml-2 font-semibold">Searching...</span>
             </div>
           )}
+         <div className="w-full h-full mt-4 flex justify-center items-center font-semibold">Not found</div>
         </ul>
-      ) : null}
+      ) : null }
     </>
   );
 };
