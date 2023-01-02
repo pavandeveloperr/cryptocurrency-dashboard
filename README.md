@@ -47,7 +47,7 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 - user can choose Chart types
 - user can click on Duration buttons to view past prices and current prices of cryptos through graphs. 
 - Sidebar indicates profit/loss percentage on 24 hour basis
-- Crypto Exchange: allows users to convert different crypto currencies into other currenciesv
+- Crypto Exchange: allows users to convert different crypto currencies into other currencies
 - Responsive
 - sidebar pagination
 
