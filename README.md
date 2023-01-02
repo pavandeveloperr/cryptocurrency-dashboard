@@ -21,7 +21,6 @@
         <li><a href="#technology-languages-used">Technology/ Languages Used</a></li>
         <li><a href="#how-to-run-locally">How to Run Locally</a></li>
         <li><a href="#how-to-contribute">How to Contribute</a></li>
-        <li><a href="#social-links">Social Links</a></li>
     </ol>
 </details>
 
@@ -34,7 +33,6 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 
 ![DashBoard home page](https://user-images.githubusercontent.com/63870995/210148826-04032249-b0a7-4958-8a53-d1a5953bab92.png)
 
-<br />
 <br />
 <!-- FEATURES -->
 
@@ -52,7 +50,6 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 - sidebar pagination
 
 <br />
-<br />
 
 <!-- BUILT WITH -->
 
@@ -66,7 +63,6 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 - Chartjs
 - CoinGeckoAPI
 
-<br />
 <br />
 <!-- HOW TO RUN LOCALLY -->
 
@@ -84,7 +80,6 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 - Go to browser and search localhost:3000
 
 <br />
-<br />
 <!-- CONTRIBUTING -->
 
 ## **How to Contribute**
@@ -101,5 +96,6 @@ If you want to contribute or have ideas for this project, just fork the repo and
 6. Open and Create a PR
 
 <br />
-<br />
-
+  
+## NOTE
+  <p> This capstone project is associated with <a href="www.almabetter.com">Almabetter</a>.</p>
