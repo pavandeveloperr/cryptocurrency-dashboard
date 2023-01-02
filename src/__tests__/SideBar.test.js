@@ -22,7 +22,7 @@ it('should display the correct number of options', () => {
     expect(screen.getAllByRole('option').length).toBe(9);
 })
 
-test('should render SideBar Component', () => {
+it('should render SideBar Component', () => {
     render(<SideBar />);
     const SideBarElement = screen.getByTestId('Sidebar-1');
     expect(SideBarElement).toBeInTheDocument();

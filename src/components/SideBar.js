@@ -4,8 +4,9 @@ import selectIcon from "../assets/select-icon.svg";
 import Pagination from "./Pagination";
 
 
-//sidebar contains crypto details such as name, market cap , and 24h price change
-//also contains filter options like sorting and reset button
+/* sidebar contains crypto details such as CoinName, market cap,
+and 24h price change, filter options like sorting and reset button */
+ 
 export const SideBar = () => {
   const { cryptoData, setSortBy, resetFunction, currency } = useContext(CryptoContext);
 
