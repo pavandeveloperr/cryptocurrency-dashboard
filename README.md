@@ -98,4 +98,4 @@ If you want to contribute or have ideas for this project, just fork the repo and
 <br />
   
 ## NOTE
-  <p> This capstone project is associated with <a href="www.almabetter.com">Almabetter</a>.</p>
+  <p> This capstone project is associated with <a href="https://www.almabetter.com">Almabetter</a>.</p>
