@@ -3,8 +3,9 @@ import { createContext, useLayoutEffect, useState } from "react";
 //create context object
 export const CryptoContext = createContext({});
 
-//cryptoContext component contains api data of cryptocoins, cryptoId and search cryptos
-// and there states as well
+/*cryptoContext component contains api data of cryptocoins,
+ cryptoId and search cryptos and there states as well
+*/
 export const CryptoProvider = ({ children }) => {
   const [cryptoId, setCryptoId] = useState();
   const [cryptoData, setCryptoData] = useState();
@@ -15,7 +16,8 @@ export const CryptoProvider = ({ children }) => {
   const [perPage, setPerPage] = useState(8);
   const [searchData, setSearchData] = useState();
   const [coinSearch, setCoinSearch] = useState("");
-
+  const [id , setCoinId] = useState("")
+ 
   const getCryptoData = async () => {
     try {
       const data = await fetch(
@@ -34,7 +36,7 @@ export const CryptoProvider = ({ children }) => {
   const getCryptoId = async () => {
     try {
       const data = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=market_cap_desc&page=1&per_page=50`
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${id}&order=market_cap_desc&page=1&per_page=50`
       )
         .then((res) => res.json())
         .then((json) => json);
