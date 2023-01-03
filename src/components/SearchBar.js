@@ -104,6 +104,9 @@ export const SearchBar = () => {
     currencyRef.current.value = "";
   };
 
+  /* lodash debounce function returns a debounced function 
+  that when called will execute a function after X milliseconds pass since its last execution. */
+  
   const debounceFunc = debounce(function (val) {
     getSearchResult(val);
   }, 2000);
