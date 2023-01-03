@@ -99,3 +99,7 @@ If you want to contribute or have ideas for this project, just fork the repo and
   
 ## NOTE
   <p> This capstone project is associated with <a href="https://www.almabetter.com">Almabetter</a>.</p>
+
+## DISCLAIMER
+<p> I don't own any of the logos or images used in the project all belongs to their respected owners. </p>
+  
