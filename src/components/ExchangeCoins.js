@@ -88,7 +88,7 @@ export const ExchangeCoins = () => {
         </div>
     </div>
     <div className="text-center mt-4 pb-4">
-        <button onClick={() => convert()} className="bg-blue-600 rounded-lg text-sm py-2 px-6 text-white font-semibold hover:bg-blue-500">
+        <button onClick={() => convert()} className="bg-gray-500 background-opacity-10 backdrop-blur-md rounded-lg text-sm py-2 px-6 text-white font-semibold hover:bg-gray-600 border border-white">
             Exchange
         </button>
     </div>
