@@ -21,7 +21,6 @@
         <li><a href="#technology-languages-used">Technology/ Languages Used</a></li>
         <li><a href="#how-to-run-locally">How to Run Locally</a></li>
         <li><a href="#how-to-contribute">How to Contribute</a></li>
-        <li><a href="#social-links">Social Links</a></li>
     </ol>
 </details>
 
@@ -35,7 +34,6 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 ![DashBoard home page](https://user-images.githubusercontent.com/63870995/210148826-04032249-b0a7-4958-8a53-d1a5953bab92.png)
 
 <br />
-<br />
 <!-- FEATURES -->
 
 ## **FEATURES**
@@ -47,11 +45,10 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 - user can choose Chart types
 - user can click on Duration buttons to view past prices and current prices of cryptos through graphs. 
 - Sidebar indicates profit/loss percentage on 24 hour basis
-- Crypto Exchange: allows users to convert different crypto currencies into other currenciesv
+- Crypto Exchange: allows users to convert different crypto currencies into other currencies
 - Responsive
 - sidebar pagination
 
-<br />
 <br />
 
 <!-- BUILT WITH -->
@@ -67,7 +64,6 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 - CoinGeckoAPI
 
 <br />
-<br />
 <!-- HOW TO RUN LOCALLY -->
 
 ## **How to Run locally**
@@ -76,15 +72,13 @@ Visit <a href="https://cryptocurrency-dashhboard.vercel.app/">Cryptocurrency-das
 ```bash
   git clone https://github.com/pavandeveloperr/cryptocurrency-dashboard.git
 ```
-
+- Open your favorite code editor and run locally!
 ```bash
   npm install
   npm start
 ```
-- Open your favorite code editor and run locally!
 - Go to browser and search localhost:3000
 
-<br />
 <br />
 <!-- CONTRIBUTING -->
 
@@ -102,5 +96,10 @@ If you want to contribute or have ideas for this project, just fork the repo and
 6. Open and Create a PR
 
 <br />
-<br />
+  
+## NOTE
+  <p> This capstone project is associated with <a href="https://www.almabetter.com">Almabetter</a>.</p>
 
+## DISCLAIMER
+<p> I don't own any of the logos or images used in the project all belongs to their respected owners. </p>
+  
